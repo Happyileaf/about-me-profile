@@ -8,27 +8,62 @@ type SkillGroup = {
 const SKILL_GROUPS: SkillGroup[] = [
   {
     title: "AI",
-    items: ["LLM SDK (Vercel AI / LangChain)", "RAG & Vector DB", "Agent & Tool Calling", "Prompt Engineering"],
+    items: [
+      "Codex / Claude Code / Trae",
+      "Agent & Tool Calling",
+      "Multica",
+      "Prompt Engineering / Harness Engineering",
+      "Spec Kit",
+      "LLM SDK (Vercel AI)",
+    ],
   },
   {
     title: "语言",
-    items: ["JavaScript (ES6+)", "TypeScript", "Python", "HTML / CSS"],
+    items: [
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "HTML / CSS",
+    ],
   },
   {
     title: "框架",
-    items: ["React / Next.js", "Vue 3", "Node.js / FastAPI", "Three.js / WebGL"],
+    items: [
+      "React / Next.js",
+      "Vue 3",
+      "Qiankun",
+      "Koa2",
+      "Backbone.js",
+      "微信小程序",
+    ],
   },
   {
     title: "工具",
-    items: ["Git & GitHub", "Vite / Webpack", "Docker", "Chrome DevTools"],
+    items: [
+      "Git/Gitflow",
+      "Webpack / Vite / Rsbuild",
+      "Monorepo",
+      "Nginx",
+      "Docker",
+      "Chrome DevTools",
+    ],
   },
   {
     title: "云服务",
-    items: ["Serverless", "Vercel", "Cloudflare"],
+    items: [
+      "Serverless",
+      "Vercel",
+      "Cloudflare",
+    ],
   },
   {
     title: "设计",
-    items: ["Figma", "Tailwind CSS", "设计系统 / Token", "Prototyping"],
+    items: [
+      "设计系统 / Token",
+      "Tailwind CSS",
+      "Figma",
+    ],
   },
 ];
 
@@ -45,14 +80,20 @@ export default function About() {
       <div className="about-grid">
         <Reveal className="about-text" delay={80}>
           <p>
-            你好，我是 Haoya。我从传统前端起步，过去几年逐步把重心转向 AI 原生应用的工程化落地。
-            我习惯于在像素级还原与工程化可维护性之间寻找平衡，认为设计意图和代码质量不应互相妥协。
+            你好，我是 好呀。一位具有设计思维的前端软件工程师，专注于构建美观的界面和体验。
+
           </p>
           <p>
-            我热衷于把 LLM、Agent、RAG 这些复杂能力包装成用户可感知的体验：一次顺滑的流式输出、
-            一个可解释的引用溯源、一条能被人工介入的工作流，都是我日常打磨的细节。
-            工作之外，我也持续关注 WebGL、可视化与设计系统方向。
+            我从传统前端起步，过去几年主要深耕前端工程化、微前端架构与设计系统方向，
+            习惯于在像素级还原与工程化可维护性之间寻找平衡，认为设计意图和代码质量不应互相妥协。
           </p>
+          <p>
+            近年我在日常研发中引入 AI Agent 与大模型能力，建设前端 harness 工具链，
+            把任务拆解、契约校验、测试门禁等重复性工作交给自动化流程，
+            让自己和团队把精力集中在体验打磨与架构决策上。
+            工作之外，我也持续关注 WebGL、可视化与组件库建设方向。
+          </p>
+
         </Reveal>
 
         <Reveal className="avatar-wrap" delay={160}>

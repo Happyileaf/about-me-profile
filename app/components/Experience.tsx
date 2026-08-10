@@ -20,23 +20,13 @@ const SUBSECTIONS: ExpSubsection[] = [
     en: "/ Education",
     entries: [
       {
-        role: "计算机科学与技术 · 硕士",
+        role: "计算机科学与技术 · 本科",
         orgHref: "#",
-        orgLabel: "@ 某 985 高校",
-        date: "2018 — 2021 · 南京",
+        orgLabel: "@ 江西师范大学",
+        date: "2018年09月 — 2022年06月 · 南昌",
         bullets: [
-          "研究方向为人机交互与数据可视化，发表相关论文 2 篇。",
-          "负责实验室 Web 可视化平台前端开发，主导多个横向项目落地。",
-        ],
-      },
-      {
-        role: "软件工程 · 学士",
-        orgHref: "#",
-        orgLabel: "@ 某 211 高校",
-        date: "2014 — 2018 · 成都",
-        bullets: [
-          "主修前端工程、数据库系统、计算机网络，连续三年获学业奖学金。",
-          "校 ACM 队员与前端技术社团负责人，组织多场校内技术分享。",
+          "主修课程：数据结构、计算机组成原理、操作系统、计算机网络、Web 应用技术、数据库技术。",
+          "获奖 / 证书：GPA 3.4 / 4.0，英语（CET-4），国家励志奖学金，校级奖学金。",
         ],
       },
     ],
@@ -46,35 +36,28 @@ const SUBSECTIONS: ExpSubsection[] = [
     en: "/ Work Experience",
     entries: [
       {
-        role: "高级前端工程师",
+        role: "前端开发工程师",
         orgHref: "#",
-        orgLabel: "@ 某 AI 基础设施公司",
-        date: "2023 — 至今 · 北京",
+        orgLabel: "@ 浙江百应科技有限公司（智能运营 SaaS）",
+        date: "2024年01月 — 2026年07月 · 杭州",
         bullets: [
-          "主导内部 AI Agent 工作台前端架构，支撑多模型接入、工具调用可视化与对话回放。",
-          "设计并落地团队首个基于 Token 流式协议的渲染层，首字延迟降低约 40%。",
-          "推动前端设计系统与组件库建设，覆盖 6 条业务线，显著减少重复开发。",
+          "主要负责通信平台、呼叫中心、MA 等核心业务线的迭代交付与线上稳定性保障。",
+          "负责前端基础设施的持续建设，建设 nano 构建工具链与统一组件库，推动多语言方案落地，支撑云服务商迁移，实现全局样式标准化，累计清理技术债务 30+ 项。",
+          "推动 AI Agent 在开发流程中落地，建设 fe-harness 与多 agent 平台，优化研发范式。",
+          "主导 WhatsApp 渠道接入与 LeadSpark 线索交易平台从 0 到 1 开发，支持出海业务。",
         ],
       },
       {
-        role: "前端工程师",
+        role: "前端开发工程师",
         orgHref: "#",
-        orgLabel: "@ 某企业协作 SaaS",
-        date: "2021 — 2023 · 杭州",
+        orgLabel: "@ 北森云计算有限公司（HR SaaS）",
+        date: "2022年05月 — 2023年10月 · 北京",
         bullets: [
-          "负责文档与知识库模块重构，基于虚拟滚动与增量渲染支撑十万级文档列表。",
-          "搭建前端可观测性体系，接入性能埋点与错误监控，关键路径崩溃率下降 60%。",
-          "参与从 Vue 2 到 Vue 3 + TypeScript 的渐进式迁移与工程规范制定。",
-        ],
-      },
-      {
-        role: "前端实习生",
-        orgHref: "#",
-        orgLabel: "@ 某数据可视化创业团队",
-        date: "2020 — 2021 · 上海",
-        bullets: [
-          "基于 Three.js / WebGL 开发行业大屏可视化组件，服务多个政企客户。",
-          "抽象通用图表配置层，将新看板交付周期从两周缩短至三天。",
+          "主要负责北森内部数据分析工具 —— Ocean 的项目迭代和线上运维等工作。",
+          "参与公司公共组件库建设，包括新增组件（3）、问题处理（7）、性能优化（2）等工作。",
+          "参与组内技术文档、业务文档的整理和日常更新工作。",
+          "主要负责招聘业务线，社招方向的项目迭代和线上运维等工作。",
+          "参与新项目面试运营系统的开发，参与面试官工作台的重构。",
         ],
       },
     ],
@@ -84,33 +67,40 @@ const SUBSECTIONS: ExpSubsection[] = [
     en: "/ Projects",
     entries: [
       {
-        role: "AI Chat Studio · 多模型对话工作台",
-        orgHref: "#work",
-        orgLabel: "查看作品",
-        date: "2024 — 2025",
+        role: "AI Agent 赋能前端体系",
+        date: "2026年03月 — 2026年07月",
         bullets: [
-          "从 0 到 1 搭建面向团队的 Prompt 版本管理与工具调用可视化平台，支持多模型并行对比。",
-          "设计流式消息协议与可回放调用链路，将复杂 Agent 执行过程对非技术同学可视化。",
+          "【项目介绍】推进 AI Agent 驱动前端开发。",
+          "【技术栈 / 工具】Codex / Claude Code，Multica.ai，Node.js，Python，Skill 等。",
+          "设计和落地 frontend-harness。面向前端项目的 AI Agent 工程化 Skill，将开发流程从“口头规范”固化为可安装、可执行、可校验的闭环工作流，覆盖任务拆解、规格生成、契约验收、QA 门禁、会话收口和运行时升级。",
+          "搭建多 agent 平台（基于 multica.ai），模拟研发团队工作流，自动执行 code review、漏洞扫描、提交 MR、bug 修复等操作。",
+          "落地多个专用场景 skill，包括技术方案编写、单元测试 / 变异测试、UI 重构（设计稿）、UI 重构（设计 spec）、飞书通知等。参与测试相关 harness 工程的搭建。",
+          "推动 frontend-harness 跨团队落地，确保后端同学可以完成简单的前端需求，基于使用反馈持续优化。",
         ],
       },
       {
-        role: "RAG Console · 知识库检索调试平台",
-        orgHref: "#work",
-        orgLabel: "查看作品",
-        date: "2023 — 2024",
+        role: "LeadSpark 线索交易平台",
+        date: "2026年04月 — 2026年06月",
         bullets: [
-          "可视化文档切片、向量召回与引用溯源，支持多套 Embedding 与向量库 A/B 对比。",
-          "将 RAG 链路每一步中间结果暴露给工程师，显著降低调参排错成本。",
+          "【项目介绍】线索交易平台，运营端管理全局、供应商管理线索供给、需求方采购线索。",
+          "【技术栈 / 工具】React，TypeScript，Qiankun，nano（Rsbuild）。",
+          "负责前端架构设计：qiankun 微前端 + 三端独立部署 + 流水线 / 构建配置 + 认证和权限等。",
+          "负责微前端架构搭建：使用 qiankun 实现微前端，主子应用搭建，支持子应用独立启动和微前端启动两种模式。",
+          "负责设计系统落地：Gravity 设计规范落地（令牌基座体系、组件契约、硬编码清除、行为契约、页面蓝图、工程门禁），antd v4 迁移至 Semi Design，支持主题动态切换（亮 / 暗模式 + 多主题色）。",
+          "负责工程质量治理：lint 问题修复，CI 流水线优化（artifacts 瘦身 + 离线安装策略），接入单元测试和变异测试。",
         ],
       },
       {
-        role: "Agent Flow · 拖拽式工作流编辑器",
-        orgHref: "#work",
-        orgLabel: "查看作品",
-        date: "2023",
+        role: "一体化数据分析工具 —— Ocean",
+        date: "2022年05月 — 2023年05月",
         bullets: [
-          "基于 React Flow 构建多 Agent 协作画布，支持条件分支与人工介入节点。",
-          "内置运行时可视化面板，可逐步回放每一次工具调用与状态变更。",
+          "【项目介绍】一体化数据分析工具。对业务数据进行搜集、处理、建模，以满足业务报表、业务建模分析、数据价值挖掘。",
+          "【技术栈】React，React Hooks，Redux，TypeScript，ECharts，AntV G2，Backbone.js，jQuery，Fetch。",
+          "参与数据集、报表、主题等的开发工作，包括数据从获取、建模、呈现、对外提供的全流程。",
+          "参与报表设计器、主题设计器的迭代开发，主要包括报表配置（数据整合、图形配置、图表联动）和主题的布局、联动。",
+          "参与图形组件库开发，封装（基于 AntV、ECharts）、扩展（辅助线、四象限等）和重构（Backbone.js → React），新旧图形迁移平稳，业务线和客户反馈良好。",
+          "辅助把控迭代进度，同步风险，团队间的沟通对齐，问题复盘等工作。",
+          "迭代过程中遵循 IPD 流程（方案评审通过率 100%，0 延期，0 线上事务）；参与制定和完善团队内部流程规范（3 项），整理业务和技术文档（15 篇）。",
         ],
       },
     ],
@@ -140,7 +130,7 @@ export default function Experience() {
           <div className="timeline">
             {sub.entries.map((entry, eIdx) => (
               <Reveal
-                key={`${sub.title}-${entry.role}`}
+                key={`${sub.title}-${entry.role}-${entry.orgLabel ?? entry.date}`}
                 className="timeline-item"
                 delay={(sIdx + eIdx) * 50}
               >
@@ -158,8 +148,8 @@ export default function Experience() {
                 </h3>
                 <p className="timeline-date">{entry.date}</p>
                 <ul>
-                  {entry.bullets.map((b) => (
-                    <li key={b}>{b}</li>
+                  {entry.bullets.map((b, bIdx) => (
+                    <li key={`${sub.title}-${entry.role}-${bIdx}`}>{b}</li>
                   ))}
                 </ul>
               </Reveal>

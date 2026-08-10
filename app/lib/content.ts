@@ -1,6 +1,6 @@
 import type { IconName } from "@/app/components/icons";
 
-export const EMAIL = "hello@haoya.dev";
+export const EMAIL = "997401767@qq.com";
 
 export type NavItem = {
   num: string;
