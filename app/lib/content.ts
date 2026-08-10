@@ -24,9 +24,8 @@ export type SocialLink = {
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: "GitHub", href: "https://github.com/", icon: "github" },
-  { name: "Instagram", href: "https://github.com/", icon: "instagram" },
-  { name: "Twitter", href: "https://github.com/", icon: "twitter" },
-  { name: "LinkedIn", href: "https://github.com/", icon: "linkedin" },
-  { name: "CodePen", href: "https://github.com/", icon: "codepen" },
+  { name: "GitHub", href: "https://github.com/Happyileaf", icon: "github" },
+  { name: "稀土掘金", href: "https://juejin.cn/user/2524134429703063", icon: "juejin" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/%E7%9B%8A%E8%8D%A3-%E6%9C%B1-b2ba91428/", icon: "linkedin" },
+  { name: "CodeSandbox", href: "https://codesandbox.io/u/Happyileaf", icon: "codesandbox" },
 ];
