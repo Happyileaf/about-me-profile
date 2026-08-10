@@ -853,6 +853,20 @@ section + section {
   margin: 0 0 8px;
   letter-spacing: 0.04em;
 }
+.project-tag.is-design {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand-muted);
+}
+.project-tag.is-design::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--brand-muted);
+  box-shadow: 0 0 0 3px rgba(136, 146, 176, 0.15);
+}
 .project-title {
   font-size: 26px;
   font-weight: 700;
@@ -864,6 +878,25 @@ section + section {
 }
 .project-title a:hover {
   color: var(--brand-primary);
+}
+.project-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: -6px 0 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--brand-muted);
+  text-decoration: none;
+  transition: color var(--brand-duration) var(--brand-easing);
+}
+.project-url:hover {
+  color: var(--brand-primary);
+}
+.project-url svg {
+  width: 13px;
+  height: 13px;
 }
 .project-desc {
   background-color: var(--brand-card);

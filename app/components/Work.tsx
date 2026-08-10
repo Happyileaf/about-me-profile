@@ -8,6 +8,8 @@ type Project = {
   href: string;
   desc: string;
   tech: string[];
+  github?: string;
+  status?: "design";
   reverse?: boolean;
 };
 
@@ -15,27 +17,30 @@ const PROJECTS: Project[] = [
   {
     code: "// project-01",
     tag: "Featured Project",
-    title: "AI Chat Studio",
-    href: "#",
-    desc: "面向团队的多模型对话工作台，支持 Prompt 版本管理、工具调用可视化与对话分支对比。通过结构化消息协议统一不同模型的流式输出，并提供可回放的调用链路，帮助团队沉淀可复用的 AI 工作流。",
-    tech: ["React", "TypeScript", "Vercel AI SDK", "Tailwind", "WebSocket"],
+    title: "Bookmark Lite 轻量书签管理系统",
+    href: "https://bookmark-lite.contextlab.top/bookmarks",
+    desc: "集 Web 平台、浏览器扩展与 MCP Server 于一体的轻量书签管理系统。支持多标签分类、收藏 / 回收站、导入导出、公共与个人双库，通过 Chrome 扩展一键收藏并同步原生书签，并以 MCP 工具把书签能力接入 Claude、Cursor 等 AI 客户端。",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "MCP"],
+    github: "https://github.com/Happyileaf/bookmark-lite",
   },
   {
     code: "// project-02",
     tag: "Featured Project",
-    title: "RAG Console",
-    href: "#",
-    desc: "企业知识库检索调试平台，可视化文档切片、向量召回与引用溯源。支持多套 Embedding 与向量库的 A/B 对比，将 RAG 链路中每一步的中间结果暴露给工程师，显著降低调参排错成本。",
-    tech: ["Next.js", "TypeScript", "LangChain", "Vector DB", "D3.js"],
+    title: "About Me Profile 个人主页",
+    href: "https://www.happyhaoya.top/",
+    desc: "个人主页，展示个人经历、项目经历、技能等。",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/Happyileaf/about-me-profile",
     reverse: true,
   },
   {
     code: "// project-03",
-    tag: "Featured Project",
-    title: "Agent Flow",
-    href: "#",
-    desc: "拖拽式 Agent 工作流编辑器，基于 React Flow 构建，支持多 Agent 协作、条件分支与人工介入节点。内置运行时可视化面板，可逐步回放每一次工具调用与状态变更，让复杂 Agent 流程对业务方可读、可审。",
-    tech: ["React", "React Flow", "TypeScript", "Zustand", "FastAPI"],
+    tag: "In Design",
+    title: "Lumen · 摄影作品展示平台",
+    href: "",
+    desc: "面向独立摄影师的作品集平台。以瀑布流与全屏灯箱呈现作品，支持按专辑 / 标签 / EXIF 信息组织浏览；内置暗色影棚级主题、自适应图像与懒加载，访客可在沉浸式阅读视图中查看拍摄参数、地点与创作手记，并通过加密外链向客户交付样张。设计中，尚未开发。",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Three.js", "PostgreSQL"],
+    status: "design",
   },
 ];
 
@@ -78,12 +83,29 @@ export default function Work() {
         >
           <ProjectPreview code={p.code} />
           <div className="project-content">
-            <p className="project-tag">{p.tag}</p>
+            <p className={`project-tag${p.status === "design" ? " is-design" : ""}`}>
+              {p.tag}
+            </p>
             <h3 className="project-title">
-              <a href={p.href} target="_blank" rel="noopener noreferrer">
-                {p.title}
-              </a>
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener noreferrer">
+                  {p.title}
+                </a>
+              ) : (
+                p.title
+              )}
             </h3>
+            {p.href.startsWith("http") ? (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-url"
+              >
+                <ExternalLinkIcon />
+                {new URL(p.href).hostname}
+              </a>
+            ) : null}
             <p className="project-desc">{p.desc}</p>
             <ul className="tech-list">
               {p.tech.map((t) => (
@@ -91,12 +113,16 @@ export default function Work() {
               ))}
             </ul>
             <div className="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <GithubIcon />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="外部链接">
-                <ExternalLinkIcon />
-              </a>
+              {p.github ? (
+                <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <GithubIcon />
+                </a>
+              ) : null}
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener noreferrer" aria-label="外部链接">
+                  <ExternalLinkIcon />
+                </a>
+              ) : null}
             </div>
           </div>
         </Reveal>
