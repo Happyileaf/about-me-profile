@@ -210,6 +210,17 @@ a {
   color: var(--brand-primary);
   margin-right: 6px;
 }
+.sidebar-nav .resume-link {
+  padding: 8px 14px;
+  border: 1px solid var(--brand-primary);
+  border-radius: 6px;
+  color: var(--brand-primary);
+}
+.sidebar-nav .resume-link:hover,
+.sidebar-nav .resume-link.active {
+  background-color: var(--brand-primary-dim);
+  color: var(--brand-primary);
+}
 
 /* ============================================================
    Left social bar

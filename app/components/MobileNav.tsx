@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { NAV_ITEMS, EMAIL } from "@/app/lib/content";
+import { NAV_ITEMS, EMAIL, RESUME_HREF } from "@/app/lib/content";
 import { MenuIcon, XIcon } from "@/app/components/icons";
 
 /**
@@ -79,7 +79,16 @@ export default function MobileNav() {
             </a>
           ))}
         </nav>
-        <a href={`mailto:${EMAIL}`} className="btn" onClick={close}>
+        <a
+          href={RESUME_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          onClick={close}
+        >
+          获取简历
+        </a>
+        <a href={`mailto:${EMAIL}`} className="btn btn-ghost" onClick={close}>
           发邮件
         </a>
       </div>

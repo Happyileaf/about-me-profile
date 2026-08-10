@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NAV_ITEMS } from "@/app/lib/content";
+import { NAV_ITEMS, RESUME_HREF } from "@/app/lib/content";
 
 /**
  * Desktop top navigation. Hidden on mobile via CSS.
@@ -57,6 +57,14 @@ export default function Topbar() {
               {item.label}
             </a>
           ))}
+          <a
+            href={RESUME_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-link"
+          >
+            获取简历
+          </a>
         </nav>
       </div>
     </aside>
