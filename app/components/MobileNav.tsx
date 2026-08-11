@@ -44,16 +44,26 @@ export default function MobileNav() {
         <a href="#hero" className="sidebar-logo" aria-label="返回首页">
           H.
         </a>
-        <button
-          type="button"
-          className="nav-toggle"
-          aria-label="打开菜单"
-          aria-controls="mobile-menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <MenuIcon />
-        </button>
+        <div className="mobile-bar-actions">
+          <a
+            href={RESUME_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-resume-link"
+          >
+            获取简历
+          </a>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-label="打开菜单"
+            aria-controls="mobile-menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <MenuIcon />
+          </button>
+        </div>
       </header>
 
       <div
@@ -79,15 +89,6 @@ export default function MobileNav() {
             </a>
           ))}
         </nav>
-        <a
-          href={RESUME_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn"
-          onClick={close}
-        >
-          获取简历
-        </a>
         <a href={`mailto:${EMAIL}`} className="btn btn-ghost" onClick={close}>
           发邮件
         </a>

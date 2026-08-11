@@ -1,4 +1,5 @@
-import type { ComponentType, SVGProps } from "react";
+import { createElement, type ComponentType, type ReactElement, type SVGProps } from "react";
+import type { IconType } from "react-icons";
 import {
   SiGithub,
   SiInstagram,
@@ -21,18 +22,26 @@ export type IconName =
   | "external-link";
 
 type IconProps = SVGProps<SVGSVGElement>;
+type IconComponent = (props: IconProps) => ReactElement;
 
-export const GithubIcon = (props: IconProps) => <SiGithub {...props} />;
-export const InstagramIcon = (props: IconProps) => <SiInstagram {...props} />;
-export const TwitterIcon = (props: IconProps) => <SiX {...props} />;
-export const LinkedinIcon = (props: IconProps) => <FaLinkedin {...props} />;
-export const CodesandboxIcon = (props: IconProps) => <SiCodesandbox {...props} />;
-export const JuejinIcon = (props: IconProps) => <SiJuejin {...props} />;
-export const MenuIcon = (props: IconProps) => <LuMenu {...props} />;
-export const XIcon = (props: IconProps) => <LuX {...props} />;
-export const ExternalLinkIcon = (props: IconProps) => <LuExternalLink {...props} />;
+function wrap(Raw: IconType): IconComponent {
+  const C = Raw as unknown as ComponentType<IconProps>;
+  return function Icon(props: IconProps): ReactElement {
+    return createElement(C, props);
+  };
+}
 
-export const ICONS: Record<IconName, ComponentType<IconProps>> = {
+export const GithubIcon = wrap(SiGithub);
+export const InstagramIcon = wrap(SiInstagram);
+export const TwitterIcon = wrap(SiX);
+export const LinkedinIcon = wrap(FaLinkedin);
+export const CodesandboxIcon = wrap(SiCodesandbox);
+export const JuejinIcon = wrap(SiJuejin);
+export const MenuIcon = wrap(LuMenu);
+export const XIcon = wrap(LuX);
+export const ExternalLinkIcon = wrap(LuExternalLink);
+
+export const ICONS: Record<IconName, IconComponent> = {
   github: GithubIcon,
   instagram: InstagramIcon,
   twitter: TwitterIcon,

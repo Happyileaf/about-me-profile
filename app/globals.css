@@ -313,6 +313,31 @@ a {
   height: 38px;
   font-size: 22px;
 }
+.mobile-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-resume-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--brand-primary);
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid var(--brand-primary);
+  border-radius: 6px;
+  transition: background-color var(--brand-duration) var(--brand-easing),
+    transform var(--brand-duration) var(--brand-easing);
+}
+.mobile-resume-link:hover {
+  background-color: var(--brand-primary-dim);
+  transform: translateY(-2px);
+}
 .nav-toggle {
   background: none;
   border: none;
