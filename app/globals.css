@@ -490,8 +490,20 @@ section + section {
 }
 .hero-cta {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.hero-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   flex-wrap: wrap;
+}
+.hero-contact-divider {
+  width: 1px;
+  height: 28px;
+  background-color: rgba(136, 146, 176, 0.35);
 }
 
 /* ============================================================

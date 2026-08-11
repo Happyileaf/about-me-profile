@@ -1,6 +1,7 @@
 import type { IconName } from "@/app/components/icons";
 
 export const EMAIL = "997401767@qq.com";
+export const GITHUB_HREF = "https://github.com/Happyileaf";
 export const RESUME_HREF = "/前端开发-朱益荣-2026.pdf";
 
 export type NavItem = {

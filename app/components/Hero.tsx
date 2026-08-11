@@ -1,5 +1,5 @@
 import Reveal from "@/app/components/Reveal";
-import { EMAIL } from "../lib/content";
+import { EMAIL, GITHUB_HREF } from "../lib/content";
 
 export default function Hero() {
   return (
@@ -18,9 +18,20 @@ export default function Hero() {
           <a href="#work" className="btn">
             vibe coding
           </a>
-          <a href={`mailto:${EMAIL}`} className="btn btn-ghost">
-            联系我 → {EMAIL}
-          </a>
+          <div className="hero-contact">
+            <a href={`mailto:${EMAIL}`} className="btn btn-ghost">
+              联系我 → {EMAIL}
+            </a>
+            <span className="hero-contact-divider" aria-hidden="true" />
+            <a
+              href={GITHUB_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
+              GitHub → {GITHUB_HREF.replace("https://", "")}
+            </a>
+          </div>
         </div>
       </Reveal>
     </section>
