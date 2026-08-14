@@ -17,9 +17,9 @@ const PROJECTS: Project[] = [
   {
     code: "// project-01",
     tag: "Featured Project",
-    title: "Bookmark Lite 轻量书签管理系统",
+    title: "Bookmark Lite 轻量书签管理平台",
     href: "https://bookmark-lite.contextlab.top/bookmarks",
-    desc: "集 Web 平台、浏览器扩展与 MCP Server 于一体的轻量书签管理系统。支持多标签分类、收藏 / 回收站、导入导出、公共与个人双库，通过 Chrome 扩展一键收藏并同步原生书签，并以 MCP 工具把书签能力接入 Claude、Cursor 等 AI 客户端。",
+    desc: "集 Web 平台、浏览器扩展与 MCP Server 于一体的轻量书签管理平台。支持多标签分类、收藏 / 回收站、导入导出、公共与个人双库，通过 Chrome 扩展一键收藏并同步原生书签，并以 MCP 工具把书签能力接入 Claude、Cursor 等 AI 客户端。",
     tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "MCP"],
     github: "https://github.com/Happyileaf/bookmark-lite",
   },
