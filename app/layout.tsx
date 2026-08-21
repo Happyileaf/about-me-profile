@@ -15,13 +15,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Haoya · AI Frontend Engineer",
+  title: "Haoya · AI FullStack Engineer",
   description:
     "Haoya — 专注于 AI 应用层的前端工程师，擅长把大模型能力封装成优雅、可交互的 Web 产品。",
   authors: [{ name: "Haoya" }],
   keywords: [
     "AI Frontend Engineer",
+    "AI FullStack Engineer",
     "前端工程师",
+    "全栈工程师",
     "LLM",
     "Agent",
     "React",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   openGraph: {
-    title: "Haoya · AI Frontend Engineer",
+    title: "Haoya · AI FullStack Engineer",
     description:
       "专注于 AI 应用层的前端工程师，擅长把大模型能力封装成优雅、可交互的 Web 产品。",
     type: "website",
