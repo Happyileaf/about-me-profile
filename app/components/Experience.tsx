@@ -37,7 +37,7 @@ const SUBSECTIONS: ExpSubsection[] = [
     entries: [
       {
         role: "前端开发工程师",
-        orgHref: "#",
+        orgHref: "https://www.byai.com/",
         orgLabel: "@ 浙江百应科技有限公司（智能运营 SaaS）",
         date: "2024年01月 — 2026年07月 · 杭州",
         bullets: [
@@ -49,7 +49,7 @@ const SUBSECTIONS: ExpSubsection[] = [
       },
       {
         role: "前端开发工程师",
-        orgHref: "#",
+        orgHref: "https://www.beisen.com/",
         orgLabel: "@ 北森云计算有限公司（HR SaaS）",
         date: "2022年05月 — 2023年10月 · 北京",
         bullets: [
@@ -58,6 +58,17 @@ const SUBSECTIONS: ExpSubsection[] = [
           "参与组内技术文档、业务文档的整理和日常更新工作。",
           "主要负责招聘业务线，社招方向的项目迭代和线上运维等工作。",
           "参与新项目面试运营系统的开发，参与面试官工作台的重构。",
+        ],
+      },
+      {
+        role: "前端开发工程师(实习)",
+        orgHref: "#",
+        orgLabel: "@ 浙江单创品牌管理有限公司（电商）",
+        date: "2021年07月 — 2021年09月 · 杭州",
+        bullets: [
+          "在集团大前端技术部业务支撑组，主要负责 ABM 业务线的项目开发和日常需求迭代。",
+          "参与学习中心内容底层改造与素材馆重构 2 个百人日项目，高质高效完成开发工作，保证项目顺利上线。",
+          "积极学习团队现有技术栈，熟悉团队协作开发流程；定期参与 Code Review，提升代码质量与规范意识。",
         ],
       },
     ],
