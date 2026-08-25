@@ -18,30 +18,30 @@ const SKILL_GROUPS: SkillGroup[] = [
     ],
   },
   {
-    title: "语言",
+    title: "前端",
     items: [
-      "JavaScript (ES6+)",
-      "TypeScript",
+      "JavaScript (ES6+) / TypeScript",
       "Node.js",
-      "Python",
-      "HTML / CSS",
+      "React / Next.js",
+      "Vue / Vuex / Pinia",
+      "Qiankun",
+      "微信小程序",
     ],
   },
   {
-    title: "框架",
+    title: "服务端",
     items: [
-      "React / Next.js",
-      "Vue 3",
-      "Qiankun",
-      "Koa2",
-      "Backbone.js",
-      "微信小程序",
+      "Node.js / Express / Koa2",
+      "PostgreSQL",
+      "Sequelize, Prisma",
+      "Python",
+      "Java(learning)"
     ],
   },
   {
     title: "工具",
     items: [
-      "Git/Gitflow",
+      "Git / Gitflow",
       "Webpack / Vite / Rsbuild",
       "Monorepo",
       "Nginx",
@@ -53,8 +53,7 @@ const SKILL_GROUPS: SkillGroup[] = [
     title: "云服务",
     items: [
       "Serverless",
-      "Vercel",
-      "Cloudflare",
+      "Vercel / Cloudflare",
     ],
   },
   {
