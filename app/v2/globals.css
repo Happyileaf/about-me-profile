@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ============================================================
+   v2 主题令牌 — Tailwind v4 主题 + 品牌设计令牌
+   品牌：AI 前端工程师 — 瑞士排版、白底黑字档案风格
+   ============================================================ */
+@theme inline {
+  --font-serif: "Newsreader", "Noto Serif SC", SimSun, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-accent-red: #ff0000;
+  --color-accent-blue: #0057b8;
+  --color-accent-yellow: #ffcc00;
+  --color-accent-amber: #6c3b00;
+
+  --color-paper: #ffffff;
+  --color-paper-light: #ffffff;
+  --color-paper-dim: #f8f8f8;
+  --color-paper-dark: #000000;
+  --color-ink: #000000;
+  --color-ink-secondary: #404040;
+  --color-ink-muted: #737373;
+  --color-ink-faint: #a3a3a3;
+  --color-grid-line: #e5e5e5;
+  --color-grid-line-strong: #000000;
+}
+
+/* ============================================================
+   以下所有品牌样式均通过 @scope 限定在 .v2-root 内，
+   不影响其他版本；裸元素选择器（如 section、a）同样被收敛。
+   ============================================================ */
+@scope (.v2-root) {
+  :scope {
+    /* Base Editorial Utilities */
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #000000;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Minimalist Grid Pattern */
+  .editorial-grid-bg {
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* ============================================================
+   以下规则作用于 .v2-root 之外的元素（html/body/滚动条），
+   仅当页面挂载 v2 时通过 :has 生效。
+   ============================================================ */
+html:has(.v2-root) {
+  scroll-behavior: smooth;
+}
+
+body:has(.v2-root) {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+body:has(.v2-root) ::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+body:has(.v2-root)::-webkit-scrollbar {
+  width: 10px;
+}
+body:has(.v2-root)::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+body:has(.v2-root)::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+body:has(.v2-root)::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.v2-root) {
+    scroll-behavior: auto;
+  }
+}
