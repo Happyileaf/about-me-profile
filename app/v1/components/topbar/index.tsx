@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NAV_ITEMS, RESUME_HREF } from "@/app/lib/content";
+import { NAV_ITEMS, RESUME_HREF } from "../../lib/content";
 
 /**
- * Desktop top navigation. Hidden on mobile via CSS.
- * Highlights the section currently in view (scroll-spy).
+ * 桌面端顶部导航，移动端通过 CSS 隐藏。
+ * 根据滚动位置高亮当前所在区块。
  */
 export default function Topbar() {
   const [activeId, setActiveId] = useState<string>("");
@@ -17,7 +17,7 @@ export default function Topbar() {
 
     if (sections.length === 0) return;
 
-    // Fallback: track which section is closest to the top on scroll.
+    /** 滚动时计算距视口顶部最近的区块 */
     const onScroll = () => {
       const offset = window.innerHeight * 0.4;
       let current = "";
@@ -26,7 +26,7 @@ export default function Topbar() {
           current = section.id;
         }
       }
-      // If we're near the very top, highlight nothing (hero has no nav entry).
+      /** 处于页面最顶部时不高亮任何项（Hero 无对应导航） */
       setActiveId(current);
     };
 

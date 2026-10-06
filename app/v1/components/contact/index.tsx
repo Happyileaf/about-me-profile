@@ -1,6 +1,7 @@
-import Reveal from "@/app/components/Reveal";
-import { EMAIL } from "@/app/lib/content";
+import Reveal from "../reveal";
+import { EMAIL } from "../../lib/content";
 
+/** 联系区块：合作邀约说明与邮件入口 */
 export default function Contact() {
   return (
     <section id="contact" className="contact">

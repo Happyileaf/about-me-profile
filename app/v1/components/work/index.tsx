@@ -1,15 +1,25 @@
-import Reveal from "@/app/components/Reveal";
-import { GithubIcon, ExternalLinkIcon } from "@/app/components/icons";
+import Reveal from "../reveal";
+import { GithubIcon, ExternalLinkIcon } from "../icons";
 
+/** 作品项目数据 */
 type Project = {
+  /** 预览中的代码注释文本 */
   code: string;
+  /** 项目标签 */
   tag: string;
+  /** 项目标题 */
   title: string;
+  /** 项目访问地址，为空表示尚未上线 */
   href: string;
+  /** 项目简介 */
   desc: string;
+  /** 技术栈列表 */
   tech: string[];
+  /** GitHub 仓库地址，可选 */
   github?: string;
+  /** 项目状态，design 表示设计中 */
   status?: "design";
+  /** 是否反转左右排版 */
   reverse?: boolean;
 };
 
@@ -44,6 +54,7 @@ const PROJECTS: Project[] = [
   },
 ];
 
+/** 作品占位预览：模拟浏览器窗口与代码注释 */
 function ProjectPreview({ code }: { code: string }) {
   return (
     <div className="project-preview" aria-hidden="true">
@@ -64,6 +75,7 @@ function ProjectPreview({ code }: { code: string }) {
   );
 }
 
+/** 作品区块：精选项目的图文展示 */
 export default function Work() {
   return (
     <section id="work">

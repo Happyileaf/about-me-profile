@@ -1,14 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { NAV_ITEMS, EMAIL, RESUME_HREF } from "@/app/lib/content";
-import { MenuIcon, XIcon } from "@/app/components/icons";
+import { NAV_ITEMS, EMAIL, RESUME_HREF } from "../../lib/content";
+import { MenuIcon, XIcon } from "../icons";
 
 /**
- * Mobile top bar + full-screen slide-in menu.
- * - Opens/closes via the hamburger button.
- * - Closes on Escape, on link selection, and when resizing to desktop.
- * - Locks body scroll while open.
+ * 移动端顶栏与全屏滑入菜单。
+ * 点击汉堡按钮开合；支持 Escape、选择链接、窗口放大到桌面尺寸时关闭；
+ * 打开期间锁定页面滚动。
  */
 export default function MobileNav() {
   const [open, setOpen] = useState(false);

@@ -1,13 +1,13 @@
-import Reveal from "@/app/components/Reveal";
-import { EMAIL, GITHUB_HREF } from "../lib/content";
+import Reveal from "../reveal";
+import { EMAIL, GITHUB_HREF } from "../../lib/content";
 
+/** 首屏区块：个人定位简介与快捷入口 */
 export default function Hero() {
   return (
     <section id="hero" className="hero">
       <Reveal>
         <p className="hero-greeting">Hi, my name is</p>
         <h1 className="hero-name">好呀。</h1>
-        {/* <h2 className="hero-subtitle">I build things for the AI era.</h2> */}
         <p className="hero-desc">
           一名 AI 前端工程师 / AI 全栈工程师。
           现以 React / Next.js / Node.js 为主力，

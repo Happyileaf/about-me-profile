@@ -1,16 +1,26 @@
-import Reveal from "@/app/components/Reveal";
+import Reveal from "../reveal";
 
+/** 时间线单条经历 */
 type TimelineEntry = {
+  /** 职位 / 项目角色 */
   role: string;
+  /** 所属机构链接，可选 */
   orgHref?: string;
+  /** 所属机构展示文本，可选 */
   orgLabel?: string;
+  /** 起止时间与地点 */
   date: string;
+  /** 工作内容要点 */
   bullets: string[];
 };
 
+/** 经历子板块 */
 type ExpSubsection = {
+  /** 板块标题 */
   title: string;
+  /** 英文副标题 */
   en: string;
+  /** 板块下的时间线条目 */
   entries: TimelineEntry[];
 };
 
@@ -141,6 +151,7 @@ const SUBSECTIONS: ExpSubsection[] = [
   },
 ];
 
+/** 经历区块：教育、工作与项目经历的时间线 */
 export default function Experience() {
   return (
     <section id="experience">

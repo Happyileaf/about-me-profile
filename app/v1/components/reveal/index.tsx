@@ -3,16 +3,21 @@
 import { useEffect, useRef, useState, type ElementType, type CSSProperties } from "react";
 
 type RevealProps = {
+  /** 渲染的元素类型，默认为 div */
   as?: ElementType;
+  /** 追加的类名 */
   className?: string;
+  /** 动画延迟，单位毫秒 */
   delay?: number;
+  /** 透传的内联样式 */
   style?: CSSProperties;
+  /** 被包裹的内容 */
   children?: React.ReactNode;
 };
 
 /**
- * Wraps content with a subtle fade-up entrance animation when it scrolls
- * into view. Respects prefers-reduced-motion via CSS (see globals.css).
+ * 为内容包裹滚动进入视口时的淡入上移动画。
+ * 动效降级通过 globals.css 中的 prefers-reduced-motion 处理。
  */
 export default function Reveal({
   as,

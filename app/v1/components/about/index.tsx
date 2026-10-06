@@ -1,7 +1,10 @@
-import Reveal from "@/app/components/Reveal";
+import Reveal from "../reveal";
 
+/** 技能分组数据 */
 type SkillGroup = {
+  /** 分组标题 */
   title: string;
+  /** 该分组下的技能项 */
   items: string[];
 };
 
@@ -66,6 +69,7 @@ const SKILL_GROUPS: SkillGroup[] = [
   },
 ];
 
+/** 关于区块：个人简介、头像与技能矩阵 */
 export default function About() {
   return (
     <section id="about">
@@ -80,7 +84,6 @@ export default function About() {
         <Reveal className="about-text" delay={80}>
           <p>
             你好，我是 好呀。一位具有设计思维的前端软件工程师，专注于构建美观的界面和体验。
-
           </p>
           <p>
             我从传统前端起步，过去几年主要深耕前端工程化、微前端架构与设计系统方向，
@@ -92,7 +95,6 @@ export default function About() {
             让自己和团队把精力集中在体验打磨与架构决策上。
             工作之外，我也持续关注可视化与组件库建设方向。
           </p>
-
         </Reveal>
 
         <Reveal className="avatar-wrap" delay={160}>
