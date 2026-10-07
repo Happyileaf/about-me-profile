@@ -22,7 +22,7 @@ export const Education: React.FC = () => {
             </h2>
           </div>
           <div className="md:col-span-8 px-6 py-4 flex items-center text-xs md:text-sm font-mono text-[#737373]">
-            <span>计算机科学与技术全日制本科教育 · 学术与理论基座</span>
+            <span>学术与理论基座</span>
           </div>
         </div>
 
