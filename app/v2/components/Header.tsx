@@ -1,7 +1,7 @@
 "use client";
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { PORTFOLIO_METADATA } from '../lib/portfolioData';
 
 interface HeaderProps {
@@ -15,21 +15,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenTerminal,
   onOpenDispatch,
 }) => {
-  const [utcTime, setUtcTime] = useState<string>('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const hours = String(now.getUTCHours()).padStart(2, '0');
-      const minutes = String(now.getUTCMinutes()).padStart(2, '0');
-      const seconds = String(now.getUTCSeconds()).padStart(2, '0');
-      setUtcTime(`${hours}:${minutes}:${seconds} UTC`);
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const navLinks = [
     { href: '#top', label: '关于' },
@@ -114,20 +100,6 @@ export const Header: React.FC<HeaderProps> = ({
           ))}
         </div>
       )}
-
-      {/* 极客与瑞士排印状态副栏 (Editorial Sub-Ticker: 严格单行，无多余折行) */}
-      <div className="border-t border-[#e5e5e5] bg-[#f8f8f8] text-[11px] font-mono text-[#525252] overflow-hidden">
-        <div className="max-w-[1080px] mx-auto px-4 md:px-8 py-1.5 border-x border-[#e5e5e5] flex items-center justify-between whitespace-nowrap text-ellipsis overflow-hidden">
-          {/* 左侧系统元信息 */}
-          <div className="flex items-center gap-2 sm:gap-3 overflow-hidden text-ellipsis">
-          </div>
-
-          {/* 右侧实时状态与时钟 */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-3">
-            <span className="text-[#ff0000] font-medium">{utcTime || 'LIVE UTC'}</span>
-          </div>
-        </div>
-      </div>
     </header>
   );
 };
