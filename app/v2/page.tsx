@@ -17,7 +17,7 @@ import { Chronology } from './components/Chronology';
 import { Education } from './components/Education';
 import { FieldNotes } from './components/FieldNotes';
 import { Contact } from './components/Contact';
-import { SectionDivider } from './components/SectionDivider';
+import SectionDivider from './components/section-divider';
 import { TerminalModal } from './components/TerminalModal';
 
 /** V2 版本首页，瑞士网格风格档案页 */
@@ -84,7 +84,6 @@ export default function V2Home() {
             onOpenTerminal={() => setTerminalOpen(true)}
             onOpenDispatch={handleOpenDispatch}
           />
-          <SectionDivider />
           <ProfileCard />
           <SectionDivider />
           <Works />
