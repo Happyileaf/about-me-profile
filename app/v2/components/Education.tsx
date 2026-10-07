@@ -15,7 +15,7 @@ export const Education: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 border-b border-[#e5e5e5]">
           <div className="md:col-span-4 p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#e5e5e5] flex items-center justify-between">
             <span className="text-xs font-mono text-[#525252]">
-              第 05 节 / 教育经历
+              第 02 节 / 教育经历
             </span>
           </div>
           <div className="md:col-span-8 p-6 md:p-8 flex items-center justify-between text-xs font-mono text-[#737373]">
