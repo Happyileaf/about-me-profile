@@ -15,7 +15,8 @@ import { ProjectExperiences } from './components/ProjectExperiences';
 import { Taxonomy } from './components/Taxonomy';
 import { Chronology } from './components/Chronology';
 import { Education } from './components/Education';
-import { FieldNotes } from './components/FieldNotes';
+// 笔记模块暂时下线：保留组件与数据代码，仅屏蔽入口
+// import { FieldNotes } from './components/FieldNotes';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import SectionDivider from './components/section-divider';
@@ -98,8 +99,10 @@ export default function V2Home() {
           <SectionDivider />
           <Education />
           <SectionDivider />
+          {/* 笔记模块暂时下线：屏蔽渲染，恢复时取消注释即可
           <FieldNotes />
           <SectionDivider />
+          */}
           <Contact />
         </main>
 

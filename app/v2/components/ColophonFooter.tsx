@@ -42,9 +42,11 @@ export const ColophonFooter: React.FC<ColophonFooterProps> = ({
             <a href="#experience" className="hover:text-[#ffffff] transition-colors">
               经历
             </a>
+            {/* 笔记模块暂时下线，屏蔽入口
             <a href="#notes" className="hover:text-[#ffffff] transition-colors">
               笔记
             </a>
+            */}
             <a href="#contact" className="hover:text-[#ffffff] transition-colors">
               联络
             </a>

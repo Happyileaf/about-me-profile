@@ -24,8 +24,6 @@ export const Header: React.FC<HeaderProps> = ({
     { href: '#taxonomy', label: '技术栈' },
     { href: '#experience', label: '经历' },
     { href: '#education', label: '教育' },
-    { href: '#notes', label: '笔记' },
-    { href: '#contact', label: '联络' },
   ];
 
   return (
@@ -53,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
           ))}
         </nav>
 
-        {/* 区块 3: 核心操作 (移除标尺按钮，保留终端与联络) */}
+        {/* 区块 3: 核心操作 (保留终端与发送邮件) */}
         <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
           <button
             type="button"
@@ -68,8 +66,9 @@ export const Header: React.FC<HeaderProps> = ({
             type="button"
             onClick={onOpenDispatch}
             className="px-2.5 sm:px-3 py-1.5 text-xs font-mono border border-[#000000] text-[#000000] hover:bg-[#000000] hover:text-[#ffffff] transition-colors cursor-pointer whitespace-nowrap"
+            title="跳转到联络区块"
           >
-            联络发信
+            发送邮件
           </button>
 
           {/* 移动端菜单折叠按钮 */}
