@@ -37,7 +37,7 @@ const VARIANT_COMPONENTS: Record<
  * @returns 分隔栏元素
  */
 export default function SectionDivider({
-  variant = SectionDividerVariantEnum.Text,
+  variant = SectionDividerVariantEnum.Stripe,
   text = PORTFOLIO_METADATA.englishName,
 }: SectionDividerProps) {
   const VariantComponent = VARIANT_COMPONENTS[variant];
