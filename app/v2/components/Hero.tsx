@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { PORTFOLIO_METADATA } from '../lib/portfolioData';
+import RotatingText from './rotating-text';
 
 interface HeroProps {
   onOpenTerminal: () => void;
@@ -26,8 +27,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenDispatch }) =>
           </div>
         </div>
 
-        {/* 上方空白区域 — 顶部大空白模块，暂时保留 */}
-        <div className="w-full h-[280px] sm:h-[340px] md:h-[400px] lg:h-[460px] border-b border-[#e5e5e5]" />
+        {/* 上方内容区域：轮播主张（右上角，与左下角头像形成对角平衡） */}
+        <div className="min-h-[220px] sm:min-h-[260px] md:min-h-[300px] lg:min-h-[340px] border-b border-[#e5e5e5] flex items-start justify-end">
+          <div className="px-4 md:px-8 pt-12 sm:pt-14 md:pt-16 lg:pt-20 max-w-full">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-[#000000] leading-[1.15] tracking-tight flex flex-wrap items-center justify-end gap-x-3 gap-y-2">
+              <span className="shrink-0">用代码构建</span>
+              <RotatingText
+                texts={['优雅的界面。', '可靠的系统。', '极速的体验。', '有趣的事物。']}
+                mainClassName="bg-[#000000] text-[#ffffff] px-2 sm:px-3 md:px-4 justify-center"
+                splitLevelClassName="overflow-hidden pb-[2px] sm:pb-1"
+                staggerFrom="last"
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '-120%' }}
+                staggerDuration={0.025}
+                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                rotationInterval={2400}
+              />
+            </h2>
+          </div>
+        </div>
 
         {/* 下方内容区域：左圆形头像 + 右侧三个模块 */}
         <div className="grid grid-cols-1 md:grid-cols-[164px_1fr]">
