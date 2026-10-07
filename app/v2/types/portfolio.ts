@@ -49,12 +49,12 @@ export interface TechStackGroup {
   id: string;
   index: string;
   title: string;
-  subtitle: string;
-  chineseSubtitle: string;
-  accentColor: string;
+  subtitle?: string;
+  chineseSubtitle?: string;
+  accentColor?: string;
   accentBorder?: string;
-  iconType: 'frontend' | 'backend' | 'mobile' | 'devops' | 'ai' | 'observability';
-  gridSpan: string;
+  iconType?: 'frontend' | 'backend' | 'mobile' | 'devops' | 'ai' | 'observability';
+  gridSpan?: string;
   items: TechStackItem[];
   isHighlighted?: boolean;
 }

@@ -36,17 +36,17 @@ export const Taxonomy: React.FC = () => {
               className="grid grid-cols-1 lg:grid-cols-12 hover:bg-[#fafafa] transition-colors"
             >
               {/* 左侧 (3 列): 序号与方向标题，右侧带垂直网格线 */}
-              <div className="lg:col-span-3 p-3 md:p-3.5 border-b lg:border-b-0 lg:border-r border-[#e5e5e5] flex items-center gap-2.5 shrink-0">
-                <span className="font-mono text-base sm:text-lg font-medium text-[#525252] leading-tight">
+              <div className="lg:col-span-3 pl-6 md:pl-8 pr-3 py-3 border-b lg:border-b-0 lg:border-r border-[#e5e5e5] flex items-center gap-2.5 shrink-0">
+                <span className="font-mono text-sm font-medium text-[#737373] leading-tight">
                   {group.index}
                 </span>
-                <h3 className="font-serif text-base sm:text-lg font-normal text-[#000000] tracking-tight leading-tight">
+                <h3 className="font-sans text-base sm:text-lg font-medium text-[#000000] tracking-tight leading-tight">
                   {group.title}
                 </h3>
               </div>
 
               {/* 右侧 (9 列): 具体技术栈 Chips */}
-              <div className="lg:col-span-9 p-3 md:p-3.5 flex flex-wrap items-center gap-1.5">
+              <div className="lg:col-span-9 pl-6 md:pl-8 pr-3 py-3 flex flex-wrap items-center gap-1.5">
                 {group.items.map((tech) => {
                   const isTechActive = activeTech === tech.name;
 
