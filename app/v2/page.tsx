@@ -17,6 +17,7 @@ import { Chronology } from './components/Chronology';
 import { Education } from './components/Education';
 import { FieldNotes } from './components/FieldNotes';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 import SectionDivider from './components/section-divider';
 import { TerminalModal } from './components/TerminalModal';
 
@@ -100,6 +101,9 @@ export default function V2Home() {
           <SectionDivider />
           <Contact />
         </main>
+
+        {/* 底部栏 */}
+        <Footer />
       </div>
     </div>
   );
