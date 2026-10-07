@@ -58,11 +58,10 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={onOpenTerminal}
-            className="px-2.5 sm:px-3 py-1.5 text-xs font-mono bg-[#000000] text-[#ffffff] hover:bg-[#222222] transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5"
+            className="px-2.5 sm:px-3 py-1.5 text-xs font-mono bg-[#000000] text-[#ffffff] hover:bg-[#222222] transition-colors cursor-pointer whitespace-nowrap"
             title="唤起极客终端交互面板 (按 ~ 键随时唤出)"
           >
-            <span className="text-[#ff0000]">❯</span>
-            <span>终端 [~]</span>
+            终端
           </button>
 
           <button
