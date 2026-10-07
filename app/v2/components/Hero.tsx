@@ -27,8 +27,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
         </div>
 
         {/* 上方内容区域：轮播主张（右上角，与左下角头像形成对角平衡） */}
-        <div className="min-h-[220px] sm:min-h-[260px] md:min-h-[300px] lg:min-h-[340px] border-b border-[#e5e5e5] flex items-start justify-end">
-          <div className="px-4 md:px-8 pt-12 sm:pt-14 md:pt-16 lg:pt-20 max-w-full">
+        <div className="min-h-[220px] sm:min-h-[260px] md:min-h-[300px] lg:min-h-[340px] border-b border-[#e5e5e5] flex items-center justify-end">
+          <div className="px-4 md:px-8 py-8 sm:py-10 max-w-full">
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-[#000000] leading-[1.15] tracking-tight flex flex-wrap items-center justify-end gap-x-3 gap-y-2">
               <span className="shrink-0">用代码构建</span>
               <RotatingText
