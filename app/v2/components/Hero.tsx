@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
               {!imgFailed ? (
                 <div className="relative w-full h-full rounded-full overflow-hidden bg-[#f0f0f0] border border-[#e5e5e5]">
                   <img
-                    src="/v2/images/hero_avatar.png"
+                    src="https://avatars.githubusercontent.com/u/55348037?v=4"
                     alt="好呀 — 头像"
                     onError={() => setImgFailed(true)}
                     className="w-full h-full object-cover"

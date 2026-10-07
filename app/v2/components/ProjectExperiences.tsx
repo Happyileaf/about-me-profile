@@ -37,13 +37,16 @@ export const ProjectExperiences: React.FC = () => {
       <div className="max-w-[1080px] mx-auto border-x border-[#e5e5e5]">
         {/* 章节顶部导航条 */}
         <div className="grid grid-cols-1 md:grid-cols-12 border-b border-[#e5e5e5]">
-          <div className="md:col-span-4 p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#e5e5e5] flex items-center justify-between">
-            <span className="text-xs font-mono text-[#525252]">
-              第 05 节 / 项目
+          <div className="md:col-span-4 px-6 py-4 border-b md:border-b-0 md:border-r border-[#e5e5e5] flex items-center gap-3">
+            <span className="text-sm font-mono text-[#737373] tabular-nums shrink-0">
+              05
             </span>
+            <h2 className="font-sans text-lg md:text-xl font-normal leading-7 text-[#000000]">
+              项目
+            </h2>
           </div>
-          <div className="md:col-span-8 p-6 md:p-8 flex flex-wrap items-center justify-between text-xs font-mono text-[#737373] gap-2">
-            <span>工程实战 </span>
+          <div className="md:col-span-8 px-6 py-4 flex items-center text-xs md:text-sm font-mono text-[#737373]">
+            <span>工程实战</span>
           </div>
         </div>
 

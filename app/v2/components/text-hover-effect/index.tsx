@@ -13,11 +13,33 @@ interface TextHoverEffectProps {
   duration?: number;
 }
 
+const VIEW_BOX_HEIGHT = 256;
+const FONT_SIZE = 184;
+const STROKE_WIDTH = 0.77;
+const DASH_LENGTH = 2560;
+
 export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [cursor, setCursor] = useState<Point>({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState<TargetAndTransition>({ cx: '50%', cy: '50%' });
+  const [viewBoxWidth, setViewBoxWidth] = useState<number>(1920);
+
+  useEffect(() => {
+    if (!svgRef.current) return;
+
+    const updateViewBox = () => {
+      const rect = svgRef.current?.getBoundingClientRect();
+      if (!rect || rect.width === 0 || rect.height === 0) return;
+      setViewBoxWidth((rect.width / rect.height) * VIEW_BOX_HEIGHT);
+    };
+
+    updateViewBox();
+
+    const observer = new ResizeObserver(updateViewBox);
+    observer.observe(svgRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -36,7 +58,8 @@ export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
       ref={svgRef}
       width="100%"
       height="100%"
-      viewBox="0 0 300 100"
+      viewBox={`0 0 ${viewBoxWidth} ${VIEW_BOX_HEIGHT}`}
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -58,7 +81,7 @@ export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
 
         <motion.radialGradient
           id="revealMask"
-          gradientUnits="userSpaceOnUse"
+          gradientUnits="objectBoundingBox"
           r="20%"
           initial={{ cx: '50%', cy: '50%' }}
           animate={maskPosition}
@@ -76,9 +99,9 @@ export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
-        style={{ opacity: hovered ? 0.7 : 0 }}
+        strokeWidth={STROKE_WIDTH}
+        className="fill-transparent stroke-neutral-200 font-[helvetica] font-bold dark:stroke-neutral-800"
+        style={{ fontSize: FONT_SIZE, opacity: hovered ? 0.7 : 0 }}
       >
         {text}
       </text>
@@ -87,12 +110,13 @@ export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-300 font-[helvetica] text-7xl font-bold dark:stroke-neutral-700"
-        initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
+        strokeWidth={STROKE_WIDTH}
+        className="fill-transparent stroke-neutral-300 font-[helvetica] font-bold dark:stroke-neutral-700"
+        style={{ fontSize: FONT_SIZE }}
+        initial={{ strokeDashoffset: DASH_LENGTH, strokeDasharray: DASH_LENGTH }}
         animate={{
           strokeDashoffset: 0,
-          strokeDasharray: 1000,
+          strokeDasharray: DASH_LENGTH,
         }}
         transition={{
           duration: 4,
@@ -107,9 +131,10 @@ export const TextHoverEffect = ({ text, duration }: TextHoverEffectProps) => {
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth={STROKE_WIDTH}
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-7xl font-bold"
+        className="fill-transparent font-[helvetica] font-bold"
+        style={{ fontSize: FONT_SIZE }}
       >
         {text}
       </text>

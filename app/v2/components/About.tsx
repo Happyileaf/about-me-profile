@@ -12,14 +12,17 @@ export const About: React.FC = () => {
       <div className="max-w-[1080px] mx-auto border-x border-[#e5e5e5]">
         {/* 章节标题横幅 */}
         <div className="grid grid-cols-1 md:grid-cols-12 border-b border-[#e5e5e5]">
-          <div className="md:col-span-4 p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#e5e5e5] flex items-center justify-between">
-            <span className="text-xs font-mono text-[#525252]">
-              第 01 节 / 理念
+          <div className="md:col-span-4 px-6 py-4 border-b md:border-b-0 md:border-r border-[#e5e5e5] flex items-center gap-3">
+            <span className="text-sm font-mono text-[#737373] tabular-nums shrink-0">
+              01
             </span>
+            <h2 className="font-sans text-lg md:text-xl font-normal leading-7 text-[#000000]">
+              理念
+            </h2>
           </div>
-          <div className="md:col-span-8 p-6 md:p-8 flex items-center justify-between text-xs font-mono text-[#737373]">
-            <span>端到端闭环 · 从数据库持久化直达像素级用户交互</span>
-            <span className="hidden sm:inline text-[#0057b8]">架构对称 / 现代主义排印</span>
+          <div className="md:col-span-8 px-6 py-4 flex items-center justify-between gap-4 text-xs md:text-sm font-mono text-[#737373]">
+            <span className="truncate">端到端闭环 · 从数据库持久化直达像素级用户交互</span>
+            <span className="hidden sm:inline text-[#0057b8] shrink-0">架构对称 / 现代主义排印</span>
           </div>
         </div>
 
