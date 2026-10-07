@@ -80,15 +80,15 @@ export default function V2Home() {
           <SectionDivider />
           <ProfileCard />
           <SectionDivider />
-          <Works />
-          <SectionDivider />
-          <ProjectExperiences />
-          <SectionDivider />
-          <Taxonomy />
-          <SectionDivider />
           <Chronology />
           <SectionDivider />
           <Education />
+          <SectionDivider />
+          <Taxonomy />
+          <SectionDivider />
+          <Works />
+          <SectionDivider />
+          <ProjectExperiences />
           <SectionDivider />
           {/* 笔记模块暂时下线：屏蔽渲染，恢复时取消注释即可
           <FieldNotes />

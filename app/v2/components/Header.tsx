@@ -17,11 +17,9 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks = [
     { href: '#top', label: '关于' },
+    { href: '#experience', label: '经历' },
     { href: '#works', label: '作品' },
     { href: '#project', label: '项目' },
-    { href: '#taxonomy', label: '技术栈' },
-    { href: '#experience', label: '经历' },
-    { href: '#education', label: '教育' },
   ];
 
   return (
