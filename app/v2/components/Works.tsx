@@ -11,7 +11,7 @@ export const Works = () => {
             </span>
           </div>
           <div className="md:col-span-8 p-6 md:p-8 flex flex-wrap items-center justify-between text-xs font-mono text-[#737373] gap-2">
-            <span>个人项目与开源实践 · 独立完成全栈设计、开发与部署</span>
+            <span>个人项目与开源实践 · 设计、全栈开发与部署</span>
           </div>
         </div>
 
