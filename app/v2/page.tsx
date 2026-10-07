@@ -85,6 +85,7 @@ export default function V2Home() {
             onOpenTerminal={() => setTerminalOpen(true)}
             onOpenDispatch={handleOpenDispatch}
           />
+          <SectionDivider />
           <ProfileCard />
           <SectionDivider />
           <Works />
