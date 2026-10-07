@@ -542,7 +542,7 @@ export const CLI_COMMANDS: Record<string, string> = {
   4. 本地优先与弹性网络 (离线可用、在线协同、故障自愈)
   5. Unix 极简哲学与可组合性 (高度正交的小模块优雅解决大问题)
   6. 零膨胀前端工艺 (瑞士网格排印，坚决摒弃圆角胶囊与杂乱噪点)`,
-  contact: `联络与交流渠道:
+  contact: `联系与交流渠道:
   邮箱: happyaihaoya@gmail.com
   主页: https://www.happyhaoya.top
   GitHub: https://github.com/Happyileaf

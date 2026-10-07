@@ -6,10 +6,9 @@ import RotatingText from './rotating-text';
 
 interface HeroProps {
   onOpenTerminal: () => void;
-  onOpenDispatch: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenDispatch }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
   const [imgFailed, setImgFailed] = useState(false);
 
   return (

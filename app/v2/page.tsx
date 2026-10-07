@@ -31,13 +31,6 @@ export default function V2Home() {
     setGridGuideActive((prev) => !prev);
   };
 
-  const handleOpenDispatch = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Global keyboard shortcuts for developer workflow: ~ or ` or Cmd+K
   useEffect(() => {
     const handleGlobalKeyDown = (e: KeyboardEvent) => {
@@ -77,14 +70,12 @@ export default function V2Home() {
           gridGuideActive={gridGuideActive}
           onToggleGridGuide={toggleGridGuide}
           onOpenTerminal={() => setTerminalOpen(true)}
-          onOpenDispatch={handleOpenDispatch}
         />
 
         {/* Primary Editorial Sections Flow */}
         <main className="flex-1">
           <Hero
             onOpenTerminal={() => setTerminalOpen(true)}
-            onOpenDispatch={handleOpenDispatch}
           />
           <SectionDivider />
           <ProfileCard />

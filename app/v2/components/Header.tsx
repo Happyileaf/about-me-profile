@@ -6,14 +6,12 @@ import { PORTFOLIO_METADATA } from '../lib/portfolioData';
 
 interface HeaderProps {
   onOpenTerminal: () => void;
-  onOpenDispatch: () => void;
   gridGuideActive?: boolean;
   onToggleGridGuide?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   onOpenTerminal,
-  onOpenDispatch,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
@@ -62,14 +60,13 @@ export const Header: React.FC<HeaderProps> = ({
             终端
           </button>
 
-          <button
-            type="button"
-            onClick={onOpenDispatch}
+          <a
+            href="#contact"
             className="px-2.5 sm:px-3 py-1.5 text-xs font-mono border border-[#000000] text-[#000000] hover:bg-[#000000] hover:text-[#ffffff] transition-colors cursor-pointer whitespace-nowrap"
-            title="跳转到联络区块"
+            title="跳转到联系区块"
           >
             发送邮件
-          </button>
+          </a>
 
           {/* 移动端菜单折叠按钮 */}
           <button

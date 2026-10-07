@@ -48,7 +48,7 @@ export const ColophonFooter: React.FC<ColophonFooterProps> = ({
             </a>
             */}
             <a href="#contact" className="hover:text-[#ffffff] transition-colors">
-              联络
+              联系
             </a>
             <button
               type="button"
