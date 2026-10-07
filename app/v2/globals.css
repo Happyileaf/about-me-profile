@@ -58,7 +58,7 @@
 html:has(.v2-root) {
   scroll-behavior: smooth;
   /* 顶部固定栏高度 h-15 = 60px，预留 72px 避免锚点定位时遮挡区块标题 */
-  scroll-padding-top: 60px;
+  scroll-padding-top: 61px;
 }
 
 body:has(.v2-root) {
