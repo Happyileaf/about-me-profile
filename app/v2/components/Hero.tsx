@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenDispatch }) =>
           <div className="flex items-center gap-3">
             <span className="text-[#000000] font-semibold">关于</span>
             <span className="text-[#a3a3a3]">/</span>
-            <span>SPEC. 2026.FULLSTACK</span>
+            <span>SPEC.2026.FULLSTACK</span>
           </div>
         </div>
 
