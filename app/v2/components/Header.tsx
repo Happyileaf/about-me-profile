@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
           href="#top" 
           className="font-serif text-xl md:text-2xl font-normal tracking-tight text-[#000000] hover:text-[#525252] transition-colors whitespace-nowrap flex items-center gap-2 shrink-0"
         >
-          <span className="font-semibold">{PORTFOLIO_METADATA.author}</span>
+          <span className="font-semibold">{PORTFOLIO_METADATA.englishName}</span>
         </a>
 
         {/* 区块 2: 核心导航链接 (单行极简，文字精炼防折行) */}
